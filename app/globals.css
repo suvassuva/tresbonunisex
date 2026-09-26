@@ -1,26 +1,120 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #111111;
+  --color-warm-bg: #F7F4EF;
+  --color-warm-card: #FFFFFF;
+  --color-champagne: #B59A72;
+  --color-champagne-dark: #9D835C;
+  --color-champagne-light: #EFE8DE;
+  --color-champagne-muted: #DFD3C3;
+  --color-muted-text: #777777;
+  --color-border-warm: #E5E1DA;
+  --color-surface-soft: #F0EBE1;
+
+  --font-serif: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  --font-sans: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F7F4EF;
+  --foreground: #111111;
+  --champagne: #B59A72;
+  --champagne-dark: #9D835C;
+  --muted: #777777;
+  --border: #E5E1DA;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  border-color: var(--border);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  background-color: #F7F4EF;
+  color: #111111;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F7F4EF;
+  color: #111111;
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #B59A72;
+  color: #FFFFFF;
+}
+
+/* Editorial typography utilities */
+.font-editorial {
+  font-family: var(--font-serif);
+}
+
+.font-body {
+  font-family: var(--font-sans);
+}
+
+/* Custom subtle luxury scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F4EF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9D2C7;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B59A72;
+}
+
+/* Subtle image hover zoom */
+.editorial-hover-zoom {
+  overflow: hidden;
+}
+.editorial-hover-zoom img {
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.editorial-hover-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* Luxury button glow and line accents */
+.editorial-gold-line {
+  position: relative;
+}
+.editorial-gold-line::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #B59A72;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+.editorial-gold-line:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
