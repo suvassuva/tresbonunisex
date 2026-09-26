@@ -138,8 +138,8 @@ export function Footer() {
 
         {/* Bottom Bar: Copyright & Socials */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
-          <p>© {new Date().getFullYear()} TRÈS BON Unisex Salon. All Rights Reserved.</p>
-          <div className="flex items-center space-x-6">
+          <p className="text-center sm:text-left">© {new Date().getFullYear()} TRÈS BON Unisex Salon. All Rights Reserved.</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             <a
               href="https://instagram.com/tresbonsalon"
               target="_blank"

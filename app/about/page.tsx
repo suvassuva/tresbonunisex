@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/image";
-import NextLink from "next/link";
+import Link from "next/link";
 import { Metadata } from "next";
 import { siteConfig } from "@/data/site";
 import { CTASection } from "@/components/CTASection";
@@ -267,13 +266,13 @@ export default function AboutPage() {
           </div>
 
           <div className="mt-14 text-center">
-            <NextLink
+            <Link
               href="/appointment"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#111111] text-white hover:bg-[#B59A72] text-xs uppercase tracking-[0.25em] font-semibold transition-colors duration-300 shadow-md"
             >
               <span>Book Your Experience</span>
               <ArrowRight className="w-3.5 h-3.5" />
-            </NextLink>
+            </Link>
           </div>
         </div>
       </section>

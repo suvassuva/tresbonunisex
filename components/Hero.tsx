@@ -63,17 +63,17 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.6, ease: "easeOut" }}
-          className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
+          className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-xs sm:max-w-none mx-auto"
         >
           <Link
             href="/appointment"
-            className="w-full sm:w-auto px-8 py-4 bg-[#B59A72] text-[#111111] hover:bg-white text-xs uppercase tracking-[0.25em] font-semibold transition-all duration-300 shadow-lg text-center"
+            className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-[#B59A72] text-[#111111] hover:bg-white text-xs uppercase tracking-[0.18em] sm:tracking-[0.25em] font-semibold transition-all duration-300 shadow-lg text-center whitespace-nowrap"
           >
             Book Appointment
           </Link>
           <Link
             href="/services"
-            className="w-full sm:w-auto px-8 py-4 border border-white/30 text-white hover:border-[#B59A72] hover:text-[#B59A72] text-xs uppercase tracking-[0.25em] font-medium transition-all duration-300 flex items-center justify-center gap-2 group text-center"
+            className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 border border-white/30 text-white hover:border-[#B59A72] hover:text-[#B59A72] text-xs uppercase tracking-[0.18em] sm:tracking-[0.25em] font-medium transition-all duration-300 flex items-center justify-center gap-2 group text-center whitespace-nowrap"
           >
             <span>Explore Services</span>
             <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
@@ -85,15 +85,32 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.9 }}
-          className="mt-16 flex items-center gap-6 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-stone-400"
+          className="mt-10 sm:mt-16 w-full max-w-sm sm:max-w-none mx-auto px-2"
         >
-          <span>Creative Hair</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-[#B59A72]" />
-          <span>Vibrant Colour</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-[#B59A72]" />
-          <span>Scalp Wellness</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-[#B59A72]" />
-          <span>Luxury Facials</span>
+          {/* Mobile view: 2 neatly spaced rows to prevent cutoff */}
+          <div className="flex flex-col sm:hidden items-center gap-2 text-[10px] uppercase tracking-[0.16em] text-stone-300 font-medium">
+            <div className="flex items-center gap-3">
+              <span className="whitespace-nowrap">Creative Hair</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[#B59A72] shrink-0" />
+              <span className="whitespace-nowrap">Vibrant Colour</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="whitespace-nowrap">Scalp Wellness</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[#B59A72] shrink-0" />
+              <span className="whitespace-nowrap">Luxury Facials</span>
+            </div>
+          </div>
+
+          {/* Desktop view: single elegant line */}
+          <div className="hidden sm:flex items-center justify-center gap-6 text-xs uppercase tracking-[0.2em] text-stone-400 font-medium">
+            <span className="whitespace-nowrap">Creative Hair</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#B59A72] shrink-0" />
+            <span className="whitespace-nowrap">Vibrant Colour</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#B59A72] shrink-0" />
+            <span className="whitespace-nowrap">Scalp Wellness</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#B59A72] shrink-0" />
+            <span className="whitespace-nowrap">Luxury Facials</span>
+          </div>
         </motion.div>
       </div>
     </section>

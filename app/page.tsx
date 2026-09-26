@@ -237,7 +237,7 @@ export default function HomePage() {
                 “{siteConfig.founder.philosophy}”
               </blockquote>
 
-              <div className="grid grid-cols-2 gap-6 pt-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 pt-2">
                 <div>
                   <h4 className="font-editorial text-lg text-[#111111]">
                     Precision Hair Sculpting

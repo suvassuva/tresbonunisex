@@ -10,7 +10,7 @@ export function MobileBottomBar() {
   return (
     <aside
       aria-label="Quick salon actions"
-      className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-[#111111]/95 backdrop-blur-md border-t border-[#B59A72]/30 px-3 py-2.5 shadow-2xl"
+      className="fixed bottom-0 inset-x-0 w-full z-40 lg:hidden bg-[#111111]/95 backdrop-blur-md border-t border-[#B59A72]/30 px-3 pt-2 pb-[calc(0.6rem+env(safe-area-inset-bottom,0px))] shadow-2xl"
     >
       <div className="grid grid-cols-3 gap-2 max-w-md mx-auto items-center">
         {/* Call button */}

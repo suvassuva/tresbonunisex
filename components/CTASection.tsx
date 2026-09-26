@@ -33,10 +33,10 @@ export function CTASection({
           {subtitle}
         </p>
 
-        <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full max-w-xs sm:max-w-none mx-auto">
           <Link
             href="/appointment"
-            className="w-full sm:w-auto px-8 py-4 bg-[#B59A72] text-[#111111] hover:bg-white text-xs uppercase tracking-[0.25em] font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg"
+            className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-[#B59A72] text-[#111111] hover:bg-white text-xs uppercase tracking-[0.18em] sm:tracking-[0.25em] font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg whitespace-nowrap"
           >
             <Calendar className="w-4 h-4 text-[#111111]" />
             <span>Book Appointment</span>
@@ -45,7 +45,7 @@ export function CTASection({
             href={getGeneralWhatsAppLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-8 py-4 border border-white/40 text-white hover:border-[#B59A72] hover:text-[#B59A72] text-xs uppercase tracking-[0.25em] font-medium transition-all duration-300 flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 border border-white/40 text-white hover:border-[#B59A72] hover:text-[#B59A72] text-xs uppercase tracking-[0.18em] sm:tracking-[0.25em] font-medium transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap"
           >
             <MessageSquare className="w-4 h-4 text-[#B59A72]" />
             <span>WhatsApp Us</span>
